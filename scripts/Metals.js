@@ -1,6 +1,8 @@
-import { getMetals, setMetal, addCustomOrder } from "./database.js"
+import { getMetals, setMetal } from "./database.js"
 
 const metals = getMetals()
+
+
 
 document.addEventListener(
     "change",

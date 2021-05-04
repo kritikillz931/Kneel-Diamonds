@@ -4,6 +4,8 @@ import { DiamondSizes } from "./DiamondSizes.js";
 import { Orders } from "./Orders.js";
 import { addCustomOrder } from "./database.js";
 
+
+
 document.addEventListener(
     "click",
     (event) => {
