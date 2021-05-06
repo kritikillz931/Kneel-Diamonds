@@ -25,18 +25,31 @@ const database = {
     { id: 4, metal: "Platinum", price: 795.45 },
     { id: 5, metal: "Palladium", price: 1241.0 },
   ],
+  accessoryTypes: [
+    {
+      id: 1,
+      type: "Ring",
+    },
+    {
+      id: 2,
+      type: "Earring",
+    },
+    {
+      id: 3,
+      type: "Necklace",
+    },
+  ],
   customOrders: [
     {
       id: 1,
+      accessoryId: 1,
       metalId: 3,
       sizeId: 2,
       styleId: 3,
       timestamp: 1614659931693,
     },
   ],
-  orderBuilder: {
-
-  },
+  orderBuilder: {},
 };
 
 export const getMetals = () => {
@@ -53,6 +66,14 @@ export const getStyles = () => {
 
 export const getData = () => {
   return [...database];
+};
+
+export const getAccessoryTypes = () => {
+  return [...database.accessoryTypes];
+};
+
+export const setAccessoryTypes = (id) => {
+  database.orderBuilder.accessoryId = id;
 };
 
 export const setMetal = (id) => {
@@ -77,9 +98,9 @@ export const addCustomOrder = () => {
 };
 
 export const orderBuilder = () => {
-    return orderBuilder
-}
+  return orderBuilder;
+};
 
 export const getOrders = () => {
-    return [...database.customOrders]
-}
+  return [...database.customOrders];
+};
